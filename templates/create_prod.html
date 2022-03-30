@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Create prod</title>
+   </head>
+   <body>
+        {% extends "template.html" %}       
+        {% block content %}
+        <p></p>
+         <form action="{{ url_for('create_prod') }}" method="post">
+            Product name: <input type="text" name="prod_name">
+            <input class="button" type="submit" value="Submit">
+        </form>
+        {{result}}
+        {% endblock %}
+   </body>
+</html>

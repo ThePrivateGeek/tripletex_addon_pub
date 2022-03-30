@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TPG</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  </head>
+  <body>
+    <header>      
+      <!-- The navigation menu -->
+      
+      <div class="navbar">
+        <div class="logo">
+          <table>
+            <tr>
+              <td><img src="/static/rd.png" width="47" height="52" alt="reddwarf"></td>
+              <td>{{banner}}</td>
+            </tr>
+          </table> 
+        </div>
+        <a href="{{ url_for('home') }}">Home</a>
+        
+        <div class="dropdown">
+          <button class="dropbtn">Employee <i class="fa fa-caret-down"></i></button>
+          <div class="dropdown-content">          
+            <a href="{{ url_for('create_emps') }}">Create Emps</a>
+            <a href="{{ url_for('employees') }}">Employees</a>
+          </div>    
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Product <i class="fa fa-caret-down"></i></button>
+          <div class="dropdown-content">
+            <a href="{{ url_for('create_prod') }}">Create prod</a>
+            <a href="{{ url_for('products') }}">Products</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Project <i class="fa fa-caret-down"></i></button>
+          <div class="dropdown-content">
+            <a href="{{ url_for('create_project') }}">Create project</a>
+            <a href="{{ url_for('projects') }}">Projects</a>
+          </div>
+        </div> 
+    </div>
+
+  </header>
+    <div class="container">
+      {% block content %}           
+      {% endblock %} 
+    </div>
+    <div class="footer">
+      &copy; Copyright 2022 by <a style="color: white;" href="http://www.theprivategeek.com">TPG</a>
+    </div>
+  </body>
+</html>
+

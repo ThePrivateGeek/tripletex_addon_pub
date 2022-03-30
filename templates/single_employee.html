@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Employee details</title>
+   </head>
+   <body>
+      {% extends "template.html" %}      
+      {% block content %}
+      <p></p>
+      <table>
+         <tr><td>ID</td><td>{{result.id}}</td></tr>
+         <tr><td>First name</td><td>{{result.firstName}}</td></tr>
+         <tr><td>Last name</td><td>{{result.lastName}}</td></tr>
+         <tr><td>Display name</td><td>{{result.displayName}}</td></tr>
+         <tr><td>Date of birth</td><td>{{result.dateOfBirth}}</td></tr>
+         <tr><td>Email</td><td>{{result.email}}</td></tr>
+      </table>
+     
+      {% endblock %}
+   </body>
+</html>

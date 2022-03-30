@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Get products</title>
+   </head>
+   <body>
+      {% extends "template.html" %}      
+      {% block content %}
+      <p></p>
+         {% for item in result.values %}
+         <p><a href="/products/{{item.id}}">{{item.name}}</a></p>
+         {% endfor %}
+      {% endblock %}
+   </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Get projects</title>
+   </head>
+   <body>
+      {% extends "template.html" %}      
+      {% block content %}
+      <p></p>
+         {% for item in result.values %}
+            <p>{{item.id}} {{item.name}}</p>
+         {% endfor %}
+      {% endblock %}
+   </body>
+</html>

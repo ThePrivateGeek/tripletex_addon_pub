@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Product details</title>
+   </head>
+   <body>
+      {% extends "template.html" %}      
+      {% block content %}
+      <p></p>
+      <table>
+         <tr><td>ID</td><td>{{result.id}}</td></tr>
+         <tr><td>Name</td><td>{{result.name}}</td></tr>         
+         <tr><td>Cost</td><td>{{result.costPrice}}</td></tr>
+         <tr><td>Weight</td><td>{{result.weight}} {{result.weightUnit}}</td></tr>
+         <tr><td>Volume</td><td>{{result.volume}} {{result.volumeUnit}}</td></tr>         
+      </table>
+     
+      {% endblock %}
+   </body>
+</html>

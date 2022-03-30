@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Create project</title>
+   </head>
+   <body>
+        {% extends "template.html" %}       
+        {% block content %}
+        <p></p>
+         <form action="{{ url_for('create_project') }}" method="post">
+            Project name: <input type="text" name="project_name">
+            <input class="button" type="submit" value="Submit">
+        </form>
+        {{result}}
+        {% endblock %}
+   </body>
+</html>
